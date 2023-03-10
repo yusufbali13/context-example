@@ -1,18 +1,18 @@
-import Footer from "./components/Footer"
-import Navs from "./components/Navs"
-import About from "./pages/About"
-import Home from "./pages/Home"
-import People from "./pages/People"
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import PersonDetail from "./pages/PersonDetail"
-import Login from "./pages/Login"
-import { LoginContext } from "./context/LoginContext"
-import { useState } from "react"
-import PrivateRouter from "./pages/PrivateRouter"
+import Footer from "./components/Footer";
+import Navs from "./components/Navs";
+import About from "./pages/About";
+import Home from "./pages/Home";
+import People from "./pages/People";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import PersonDetail from "./pages/PersonDetail";
+import Login from "./pages/Login";
+import { LoginContext } from "./context/LoginContext";
+import { useState } from "react";
+import PrivateRouter from "./pages/PrivateRouter";
 
 function App() {
   //? Local State
-  const [user, setUser] = useState({ email: "", password: "" })
+  const [user, setUser] = useState({ email: "", password: "" });
 
   return (
     <LoginContext.Provider value={{ user, setUser }}>
@@ -33,7 +33,7 @@ function App() {
         <Footer />
       </BrowserRouter>
     </LoginContext.Provider>
-  )
+  );
 }
 
-export default App
+export default App;
